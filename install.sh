@@ -65,7 +65,8 @@ if [[ ${OS} == Debian ]];then
 	apt-get install git -y
     apt-get install -y
 fi
-
+#stop default web server
+service apache2 stop
 #Install Caddy (Powered By Toyo : https://doub.io/shell-jc1/)
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/caddy_install.sh
 chmod +x caddy_install.sh && bash caddy_install.sh install http.filemanager
